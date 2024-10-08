@@ -26,7 +26,8 @@ export class LoginPage {
     this.infoPass = process.env.PASS_SARG!;
   }
   async goToLogin() {
-    await this.page.goto(this.homePage);
+    //await this.page.goto(this.homePage);
+    await this.page.goto("https://www.sudamerikargentina.com.ar/");
   }
   async loginAccount() {
     await this.selectIngresar.click();
@@ -38,13 +39,18 @@ export class LoginPage {
     await this.profileBtn.waitFor({ state: "visible" });
   }
   async loginStorage() {
-    await this.selectIngresar.click();
-    if (await this.selectFacebook.isVisible()) {
+    
+   // await this.page.getByRole("link", { name: " Ingresar" }).click();
+    if (await this.selectIngresar.isVisible()) {
+      await this.selectIngresar.click();
       await this.selectFacebook.click();
       await this.fbInputEmail.fill(this.infoEmail);
       await this.fbInputPass.fill(this.infoPass);
       await this.fbLoginBtn.click();
       await this.fbAcceptAccount.click();
+      await this.page.waitForURL(
+        "https://www.sudamerikargentina.com.ar/search?previousPage=login"
+      );
       await this.profileBtn.waitFor({ state: "visible" });
       await this.page
       .context()

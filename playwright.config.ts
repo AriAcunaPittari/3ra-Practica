@@ -40,6 +40,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices["Desktop Chrome"], trace: "on", headless: false },
+      
     },
 
     /* Test against mobile viewports. */

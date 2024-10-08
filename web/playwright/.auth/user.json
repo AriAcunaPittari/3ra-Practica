@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "_dd_s",
+      "value": "rum=2&id=19c497b9-a9ad-491b-930b-1885e6161fd7&created=1728334706083&expire=1728335606083",
+      "domain": "www.sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728335606,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "_ga_Y6EG4FYV13",
+      "value": "GS1.1.1728334706.1.0.1728334706.60.0.0",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894706.584235,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.3.73865166.1728334707",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894706.616868,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.3.1142759434.1728334707",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728421106,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-232474832-1",
+      "value": "1",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728334766,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "test_cookie",
+      "value": "CheckForPermission",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1728335606.742911,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.sudamerikargentina.com.ar",
+      "localStorage": [
+        {
+          "name": "persist:root",
+          "value": "{\"slice.auth\":\"{\\\"user\\\":null,\\\"token\\\":null,\\\"signupForm\\\":{\\\"user\\\":null,\\\"token\\\":null,\\\"provider\\\":null},\\\"isInDeliveryArea\\\":false,\\\"isInPickupArea\\\":false,\\\"isValidClientCode\\\":false,\\\"bootstrapState\\\":\\\"pending\\\",\\\"providerClient\\\":null,\\\"salesman\\\":null}\",\"slice.site\":\"{\\\"loaded\\\":false,\\\"site\\\":{\\\"id\\\":79,\\\"name\\\":\\\"Sudamerik Argentina\\\",\\\"type\\\":\\\"PROPIO\\\",\\\"provider\\\":{\\\"id\\\":241,\\\"published\\\":true,\\\"deletedAt\\\":null,\\\"location\\\":{\\\"lat\\\":null,\\\"long\\\":null,\\\"address\\\":null,\\\"streetName\\\":null,\\\"streetNumber\\\":null,\\\"zipcode\\\":null,\\\"latlng\\\":{\\\"x\\\":null,\\\"y\\\":null}},\\\"country\\\":{\\\"id\\\":1,\\\"code\\\":\\\"AR\\\",\\\"phoneCode\\\":\\\"54\\\"}},\\\"createdAt\\\":\\\"2024-02-23T14:49:07.000Z\\\",\\\"updatedAt\\\":null,\\\"deletedAt\\\":null,\\\"config\\\":{\\\"website.title\\\":\\\"Sudarmerik Argentina\\\",\\\"website.manifest.theme-color\\\":null,\\\"website.manifest.msapplication-TileImage\\\":null,\\\"website.manifest.msapplication-TileColor\\\":null,\\\"website.manifest.msapplication-navbutton-color\\\":null,\\\"website.manifest.file\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/manifest.json\\\",\\\"website.manifest.application-name\\\":null,\\\"website.manifest.apple-touch-icon\\\":null,\\\"website.logo-width\\\":null,\\\"website.logo-height\\\":null,\\\"website.logo\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/logo.png\\\",\\\"website.keywords\\\":null,\\\"website.icon\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/favicon.png\\\",\\\"website.hostnames\\\":[\\\"www.sudamerikargentina.com.ar\\\",\\\"sudamerikargentina.tiendapropio.com\\\"],\\\"website.description\\\":null,\\\"theme.colors.warning-content\\\":\\\"#d97706\\\",\\\"theme.colors.warning\\\":\\\"#EADB26\\\",\\\"theme.colors.success-content\\\":\\\"#16a34a\\\",\\\"theme.colors.success\\\":\\\"#71D230\\\",\\\"theme.colors.secondary-focus\\\":\\\"#020203\\\",\\\"theme.colors.secondary-content\\\":\\\"#ffffff\\\",\\\"theme.colors.secondary\\\":\\\"#101115\\\",\\\"theme.colors.primary-focus\\\":null,\\\"theme.colors.primary-content\\\":null,\\\"theme.colors.primary\\\":null,\\\"theme.colors.neutral-focus\\\":\\\"#d3cfc4\\\",\\\"theme.colors.neutral-content\\\":\\\"#3d4451\\\",\\\"theme.colors.neutral\\\":\\\"#ededed\\\",\\\"theme.colors.info-content\\\":null,\\\"theme.colors.info\\\":null,\\\"theme.colors.error-content\\\":\\\"#ffffff\\\",\\\"theme.colors.error\\\":\\\"#ff4a4a\\\",\\\"theme.colors.base-content\\\":null,\\\"theme.colors.base-300\\\":null,\\\"theme.colors.base-200\\\":null,\\\"theme.colors.base-100\\\":null,\\\"theme.colors.accent-focus\\\":\\\"#a32622\\\",\\\"theme.colors.accent-content\\\":\\\"#ffffff\\\",\\\"theme.colors.accent\\\":\\\"#df342f\\\",\\\"status.maintenance\\\":false,\\\"status.inactive\\\":false,\\\"sale.price.before-login\\\":false,\\\"feature.login.client-code.sale.price\\\":false,\\\"feature.login.client-code.indicator.text\\\":\\\"Pedí­selo a tu proveedor tocando abajo el botón \\\\\\\"Solicitar código\\\\\\\"\\\",\\\"feature.has-custom-category\\\":true,\\\"feature.checkout.logistic.pickup\\\":false,\\\"feature.checkout.logistic.delivery\\\":true,\\\"contact.whatsapp\\\":\\\"5491120248229\\\",\\\"contact.twitter\\\":null,\\\"contact.taxId\\\":null,\\\"contact.phone\\\":\\\"5491120248229\\\",\\\"contact.instagram\\\":\\\"https://www.instagram.com/gruposudamerik/\\\",\\\"contact.facebook\\\":\\\"https://www.facebook.com/Gruposudamerik\\\",\\\"contact.email\\\":\\\"ventas@sudamerikargentina.com.ar\\\",\\\"contact.address\\\":\\\"Don Bosco 4760, La reja.\\\",\\\"components.SocialIcon.variant\\\":null,\\\"components.NavigationList.variant\\\":null,\\\"components.NavigationLink.variant\\\":null,\\\"components.NavigationLink.ghost\\\":false,\\\"components.Header.variant\\\":null,\\\"components.Footer.variant\\\":null,\\\"components.CategoryListItem.variant\\\":null,\\\"components.active-variant\\\":null,\\\"chat.title\\\":null,\\\"chat.themes.colors.primary-content\\\":null,\\\"chat.themes.colors.primary\\\":null,\\\"chat.hostnames\\\":[\\\"sudamerikargentina.tiendapropio.chat\\\"]}},\\\"token\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjp7ImlkIjo3OSwibmFtZSI6IlN1ZGFtZXJpayBBcmdlbnRpbmEiLCJ0eXBlIjoiUFJPUElPIiwicHJvdmlkZXIiOnsiaWQiOjI0MSwicHVibGlzaGVkIjp0cnVlLCJkZWxldGVkQXQiOm51bGwsImxvY2F0aW9uIjp7ImxhdCI6bnVsbCwibG9uZyI6bnVsbCwiYWRkcmVzcyI6bnVsbCwic3RyZWV0TmFtZSI6bnVsbCwic3RyZWV0TnVtYmVyIjpudWxsLCJ6aXBjb2RlIjpudWxsLCJsYXRsbmciOnsieCI6bnVsbCwieSI6bnVsbH19LCJjb3VudHJ5Ijp7ImlkIjoxLCJjb2RlIjoiQVIiLCJwaG9uZUNvZGUiOiI1NCJ9fSwiY3JlYXRlZEF0IjoiMjAyNC0wMi0yM1QxNDo0OTowNy4wMDBaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJmZWF0dXJlcyI6eyJyZXF1aXJlQ2xpZW50Q29kZVRvVmlld1ByaWNlcyI6eyJlbmFibGVkIjpmYWxzZX0sInNob3dUb3RhbFdpdGhvdXRUYXhlcyI6eyJlbmFibGVkIjp0cnVlfSwic2hvd1ByaWNlQmVmb3JlTG9naW4iOnsiZW5hYmxlZCI6ZmFsc2V9LCJhbGxvd0NvdXBvbk1vZHVsZSI6eyJlbmFibGVkIjp0cnVlfX0sImNoYW5uZWwiOnsiaWQiOjIsIm5hbWUiOiJQUk9QSU9fV0VCIn0sImlhdCI6MTcyODMzNDY0N30.CqEsrNH5ag7OFfQeUlp6TojGGLE79samIg65fgrA89k\\\",\\\"bootstrapState\\\":\\\"success\\\"}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+        }
+      ]
+    }
+  ]
+}
