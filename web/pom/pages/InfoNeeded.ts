@@ -4,8 +4,8 @@ export class InfoNeeded {
   page: Page;
   infoEmail: string;
   infoPass: string;
-  infoName:string;
-  infoLastName:string;
+  infoName: string;
+  infoLastName: string;
   infoShippingTime: string;
   constructor(page: Page) {
     this.page = page;
@@ -14,7 +14,6 @@ export class InfoNeeded {
     this.infoName = process.env.NAME_SARG!;
     this.infoLastName = process.env.LAST_NAME_SARG!;
     this.infoShippingTime = process.env.STIME_SARG!;
-
   }
   getDatalogin() {
     return {
@@ -24,12 +23,9 @@ export class InfoNeeded {
   }
   getDataUser() {
     return {
-      email: this.infoEmail,
-      password: this.infoPass,
       name: this.infoName,
       lastname: this.infoLastName,
       timeship: this.infoShippingTime,
     };
   }
-  
 }

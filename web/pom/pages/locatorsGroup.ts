@@ -12,20 +12,20 @@ export class LocatorsGroupPage {
     this.page = page;
     this.btnConfirmar = this.page.getByRole("button", { name: "Confirmar" });
     this.addItemOne = this.page
-    .locator("article")
-    .filter({ hasText: "PLENYVegan Bar sabor" })
-    .getByRole("button")
-    .nth(1);
-  this.addItemTwo = this.page
-    .locator("article")
-    .filter({ hasText: "ARROCITASGalletas Mini" })
-    .getByRole("button")
-    .nth(1);
-  this.addItemThree = this.page
-    .locator("article")
-    .filter({ hasText: "LADDU BARBarrita de Cereal" })
-    .getByRole("button")
-    .nth(1);
+      .locator("article")
+      .filter({ hasText: "PLENYVegan Bar sabor" })
+      .getByRole("button")
+      .nth(1);
+    this.addItemTwo = this.page
+      .locator("article")
+      .filter({ hasText: "ARROCITASGalletas Mini" })
+      .getByRole("button")
+      .nth(1);
+    this.addItemThree = this.page
+      .locator("article")
+      .filter({ hasText: "LADDU BARBarrita de Cereal" })
+      .getByRole("button")
+      .nth(1);
     this.labelTotal = this.page.getByText("Total$");
     this.labelFaltan = this.page.getByText("Faltan$");
   }
@@ -38,7 +38,6 @@ export class LocatorsGroupPage {
       addItemOne: this.addItemOne,
       addItemTwo: this.addItemTwo,
       addItemThree: this.addItemThree,
-      
     };
   }
   getLabelCart(page: Page) {
@@ -46,6 +45,5 @@ export class LocatorsGroupPage {
       labelFaltan: this.labelFaltan,
       labelTotal: this.labelTotal,
     };
-     
   }
 }

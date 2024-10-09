@@ -2,7 +2,6 @@ import { Locator, Page } from "playwright-core";
 
 export class LoginPage {
   page: Page;
-  homePage: string;
   selectFacebook: Locator;
   selectIngresar: Locator;
   fbInputEmail: Locator;
@@ -14,7 +13,6 @@ export class LoginPage {
   infoPass: string;
   constructor(page: Page) {
     this.page = page;
-    this.homePage = process.env.URL_SARG!;
     this.selectFacebook = this.page.getByRole("button", { name: "Facebook" });
     this.selectIngresar = this.page.getByRole("link", { name: " Ingresar" });
     this.fbInputEmail = this.page.getByPlaceholder("Email or phone number");
@@ -26,7 +24,6 @@ export class LoginPage {
     this.infoPass = process.env.PASS_SARG!;
   }
   async goToLogin() {
-    //await this.page.goto(this.homePage);
     await this.page.goto("https://www.sudamerikargentina.com.ar/");
   }
   async loginAccount() {
@@ -39,8 +36,6 @@ export class LoginPage {
     await this.profileBtn.waitFor({ state: "visible" });
   }
   async loginStorage() {
-    
-   // await this.page.getByRole("link", { name: " Ingresar" }).click();
     if (await this.selectIngresar.isVisible()) {
       await this.selectIngresar.click();
       await this.selectFacebook.click();
@@ -53,8 +48,8 @@ export class LoginPage {
       );
       await this.profileBtn.waitFor({ state: "visible" });
       await this.page
-      .context()
-      .storageState({ path: "web/context/storageLogin.json" });
+        .context()
+        .storageState({ path: "web/context/storageLogin.json" });
     }
   }
 }

@@ -13,13 +13,9 @@ export class CheckPersonalInfoPage {
     this.page = page;
     this.goToHome = process.env.URL_SARG!;
     this.profileBtn = this.page.getByRole("link", { name: " Perfil" });
-    this.locatorName = this.page.getByText("Nombre").locator(".font-bold");
-    this.locatorLastName = this.page
-      .getByText("Apellido")
-      .locator(".font-bold");
-    this.locatorShippingTime = this.page
-      .getByText("Horario de entrega")
-      .locator(".font-bold");
+    this.locatorName = this.page.getByText("Ariana"); //hc :c
+    this.locatorLastName = this.page.getByText("acuña");
+    this.locatorShippingTime = this.page.getByText("Jornada completa");
   }
   async goToProfile() {
     await this.page.goto(this.goToHome);

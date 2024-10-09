@@ -1,41 +1,48 @@
 import { Locator, Page } from "playwright-core";
 
 export class SearchProductPage {
-    page: Page;
-    searchInput: Locator;
-    selectSearch: Locator;
-    productVeganBar: Locator;
-    productoGalletas: Locator;
-    addBtn: Locator;
-    succsessPopUp: Locator;
-    constructor(page: Page){
-        this.page = page;
-        this.searchInput = this.page.getByPlaceholder('Buscar productos');
-        this.selectSearch = this.page.locator("p").locator("span").nth(1);
-        this.productVeganBar = this.page.locator('a').filter({ hasText: 'PLENYVegan Bar sabor' });
-        this.productoGalletas = this.page.locator('a').filter({ hasText: 'ARROCITASGalletas Mini' });
-        this.addBtn = this.page.locator('article').getByText('Agregar');
-        this.succsessPopUp = this.page.getByText('Producto agregado con éxito');
-        
-    }
-    async goToSearch(){
-        await this.page.goto(process.env.URL_SARG!);
-    }
-    async searchProduct() {
-        await this.searchInput.fill("Chocolate");
-        const searchValue = await this.searchInput.inputValue();
-        console.log("Valor del input: "+searchValue);
-        const selectSearchText = await this.selectSearch.textContent();
-        console.log("El texto seleccionado es:" + selectSearchText);
-        await this.selectSearch.click();
+  page: Page;
+  searchInput: Locator;
+  selectSearch: Locator;
+  addBtn: Locator;
+  succsessPopUp: Locator;
+  tableItems: Locator;
+  rowItems: Locator;
 
-      }
-      async selectProducts(){
-        await this.page.waitForLoadState("networkidle");
-        await this.page.pause();
-        await this.productVeganBar.click();
+  constructor(page: Page) {
+    this.page = page;
+    this.searchInput = this.page.getByPlaceholder("Buscar productos");
+    this.selectSearch = this.page.locator("p").locator("span");
+    this.addBtn = this.page.locator("article").getByText("Agregar");
+    this.succsessPopUp = this.page.getByText("Producto agregado con éxito");
+    this.tableItems = this.page.locator(
+      "div[class='w-full grid gap-4 grid-cols-2 sm:grid-cols-4']"
+    );
+    this.rowItems = this.tableItems.locator("a");
+  }
+  async goToSearch() {
+    await this.page.goto(process.env.URL_SARG!);
+  }
+  async searchProduct() {
+    await this.searchInput.fill(process.env.SEARCH_PRODUCT!);
+    await this.searchInput.press("Enter");
+  }
+  async selectProducts(productos: string[]) {
+    await this.page.waitForLoadState("networkidle");
+    for (let i = 0; i < (await this.rowItems.count()); i++) {
+      const productItem = await this.rowItems
+        .locator("div[class='flex flex-col']")
+        .locator("span")
+        .nth(i);
+      const product = await productItem.innerText();
+      if (productos.includes(product)) {
+        await productItem.click();
         await this.addBtn.click();
-        await this.productoGalletas.click();
-        await this.addBtn.click();
+
+        if (i === 3) {
+          break;
+        }
       }
+    }
+  }
 }

@@ -15,7 +15,7 @@ export class POManager {
   checkPersonalInfoPage: CheckPersonalInfoPage;
   logout: LogoutPage;
   searchProductPage: SearchProductPage;
-  checkItemsPage : CheckItemsPage;
+  checkItemsPage: CheckItemsPage;
   addToCartPage: AddToCartPage;
   locatorsGroupPage: LocatorsGroupPage;
   confirmCartInfoPage: ConfirmCartInfoPage;
@@ -31,7 +31,6 @@ export class POManager {
     this.addToCartPage = new AddToCartPage(this.page);
     this.locatorsGroupPage = new LocatorsGroupPage(this.page);
     this.confirmCartInfoPage = new ConfirmCartInfoPage(this.page);
-
     this.infoNeeded = new InfoNeeded(this.page);
   }
   getloginPage() {
@@ -40,28 +39,25 @@ export class POManager {
   getCheckPersonalInfoPage() {
     return this.checkPersonalInfoPage;
   }
-
   getlogout() {
     return this.logout;
   }
   getsearchProductPage() {
     return this.searchProductPage;
   }
-  getcheckItemsPage(){
+  getcheckItemsPage() {
     return this.checkItemsPage;
   }
-
-  getaddToCartPage(){
+  getaddToCartPage() {
     return this.addToCartPage;
   }
-  getLocatorsGroupPage(){
+  getLocatorsGroupPage() {
     return this.locatorsGroupPage;
   }
-  getConfirmCartInfoPage(){
+  getConfirmCartInfoPage() {
     return this.confirmCartInfoPage;
   }
-
-  getUserData(){
-        return this.infoNeeded;
-    }
+  getUserData() {
+    return this.infoNeeded;
+  }
 }
