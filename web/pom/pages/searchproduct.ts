@@ -4,7 +4,6 @@ export class SearchProductPage {
     page: Page;
     searchInput: Locator;
     selectSearch: Locator;
-    productBarraArroz: Locator;
     productVeganBar: Locator;
     productoGalletas: Locator;
     addBtn: Locator;
@@ -13,7 +12,6 @@ export class SearchProductPage {
         this.page = page;
         this.searchInput = this.page.getByPlaceholder('Buscar productos');
         this.selectSearch = this.page.locator("p").locator("span").nth(1);
-        this.productBarraArroz = this.page.locator('a').filter({ hasText: 'LULEMUUBarrita de Arroz con Chocolate Blanco 12gr x20unUnidades mínimas: 1$ 4.' });
         this.productVeganBar = this.page.locator('a').filter({ hasText: 'PLENYVegan Bar sabor' });
         this.productoGalletas = this.page.locator('a').filter({ hasText: 'ARROCITASGalletas Mini' });
         this.addBtn = this.page.locator('article').getByText('Agregar');
@@ -35,8 +33,6 @@ export class SearchProductPage {
       async selectProducts(){
         await this.page.waitForLoadState("networkidle");
         await this.page.pause();
-        //await this.productBarraArroz.click();
-        //await this.addBtn.click();
         await this.productVeganBar.click();
         await this.addBtn.click();
         await this.productoGalletas.click();
