@@ -2,7 +2,10 @@
   "name": "3ra-practica",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:withlogin": "npx playwright test withLogin.spec.ts",
+    "test:login": "npx playwright test withoutLogin.spec.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

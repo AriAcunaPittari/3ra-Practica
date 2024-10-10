@@ -4,7 +4,8 @@ export class CheckItemsPage {
   page: Page;
   pageCart: Locator;
   emptyCart: Locator;
-  subtractProduct: Locator;
+  subtractProductOne: Locator;
+  subtractProductTwo: Locator;
   labelFaltan: Locator;
   labelTotal: Locator;
   confirmEmptyCart: Locator;
@@ -15,11 +16,8 @@ export class CheckItemsPage {
     this.page = page;
     this.pageCart = this.page.getByRole("link", { name: " Carrito" });
     this.emptyCart = this.page.getByRole("button", { name: "Vaciar carrito" });
-    this.subtractProduct = this.page
-      .locator("article")
-      .filter({ hasText: "ARROCITASGalletas Mini" })
-      .locator("svg")
-      .first();
+    this.subtractProductOne = this.page.locator('article').filter({ hasText: 'SUDAMERIKChips de Chocolate' }).getByRole('button').first();
+    this.subtractProductTwo = this.page.locator('article').filter({ hasText: 'LASFORCereales Almohaditas de' }).getByRole('button').first();
     this.labelFaltan = this.page.getByText("Faltan$");
     this.labelTotal = this.page.getByText("Total$");
     this.confirmEmptyCart = this.page.getByText("Vaciar", { exact: true });
@@ -37,8 +35,9 @@ export class CheckItemsPage {
     let falta = Number(faltanNumb.replace("$", "").trim());
 
     while (total > falta) {
-      await this.subtractProduct.click();
-      if (falta > total) {
+      await this.subtractProductOne.click();
+      await this.subtractProductTwo.click();
+      if (falta < total) {
         break;
       }
     }
